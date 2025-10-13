@@ -1904,7 +1904,9 @@ function playSound(filename) {
     const audio = new Audio(filename);
     audio.play();
   }
-    // Select all drum-piece elements
+  </script>
+  <script>
+  // Select all drum-piece elements
   document.querySelectorAll('.drum-piece').forEach(function(piece) {
     piece.addEventListener('click', function() {
       const sound = piece.getAttribute('data-sound');
@@ -1915,6 +1917,6 @@ function playSound(filename) {
       }
     });
   });
-  </script>
+</script>
 </body>
 </html>
