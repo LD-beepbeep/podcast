@@ -1900,7 +1900,10 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 's') playSnare();
   if (e.key === 'd') playHiHat();
 });
-
+function playSound(filename) {
+    const audio = new Audio(filename);
+    audio.play();
+  }
   </script>
 </body>
 </html>
