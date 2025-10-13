@@ -1904,6 +1904,17 @@ function playSound(filename) {
     const audio = new Audio(filename);
     audio.play();
   }
+    // Select all drum-piece elements
+  document.querySelectorAll('.drum-piece').forEach(function(piece) {
+    piece.addEventListener('click', function() {
+      const sound = piece.getAttribute('data-sound');
+      if (sound) {
+        const audio = new Audio(sound);
+        audio.currentTime = 0; // rewind to start if pressed repeatedly
+        audio.play();
+      }
+    });
+  });
   </script>
 </body>
 </html>
